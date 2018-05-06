@@ -1,0 +1,21 @@
+=calREM($targetSize: 17)
+	font-size: ($targetSize / 17) + rem
+
+=fade($duration: 200ms)
+	-webkit-transition: all $duration linear
+	-moz-transition: all $duration linear
+	-o-transition: all $duration linear
+	-ms-transition: all $duration linear
+	transition: all $duration linear
+
+=placeholderColor($color)
+	&::-webkit-input-placeholder  /* WebKit browsers */
+		color:    $color
+	&:-moz-placeholder  /* Mozilla Firefox 4 to 18 */
+		color:    $color
+		opacity:  1
+	&::-moz-placeholder  /* Mozilla Firefox 19+ */
+		color:    $color
+		opacity:  1
+	&:-ms-input-placeholder  /* Internet Explorer 10+ */
+		color:    $color

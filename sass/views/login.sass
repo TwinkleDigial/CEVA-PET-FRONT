@@ -1,0 +1,80 @@
+.login
+  background: $purple
+  margin: 0
+  height: 100%
+  min-height: 100vh
+  max-height: 100vh
+  padding: 20px 0
+  overflow: hidden
+  font-family: 'Poppins', 'Roboto', sans-serif
+
+  &:before
+    background: url('../images/circles-mobile.png') no-repeat top center
+    background-size: 100%
+    width: 100%
+    content: ''
+    margin: 0
+    padding: 0
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    min-height: 100%
+    z-index: 1
+
+  .login-header
+    min-height: 250px
+    width: 100%
+    z-index: 2
+    padding-top: 10vh
+
+    .vectra-logo
+      max-width: 150px
+      height: auto
+      margin: 0 auto 15px
+      display: block
+
+    .app-name
+      color: $white
+      font-family: 'Roboto', sans-serif
+      +calREM(55)
+      text-align: center
+      text-transform: uppercase
+      font-weight: 700
+      text-shadow: 0 6px 4px transparentize($purple-dark, 0.4)
+      margin: 0
+
+  
+  .login-buttons
+    z-index: 2
+
+    .login-facebook,
+    .login-email
+      +calREM(17)
+      padding: 8px 20px
+      border-radius: 10px
+
+      .icon
+        +calREM(22)
+        padding-right: 4px
+        position: relative
+        top: 2px
+
+    .recover
+      color: $white
+      +calREM(15)
+      text-align: center
+
+      a
+        color: $white
+        text-decoration: underline
+
+        &:hover,
+        &:focus
+          text-decoration: none
+
+    .ceva-logo-small
+      max-width: 150px
+      height: auto
+      margin: 15px auto 0
+      display: block

@@ -1,0 +1,21 @@
+{
+  "name": "Ceva Pet Game",
+  "short_name": "CevaPetGame",
+  "icons": [
+    {
+      "src": "/static/img/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#A068A3",
+  "theme_color": "#A068A3"
+}

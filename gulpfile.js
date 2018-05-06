@@ -65,7 +65,7 @@ gulp.task('minify', function(){
 gulp.task('reload', ['minify'], function(){
   
   // IF TEMPLTES CHANGE
-  gulp.watch(['./index.html', './*.html'], {intervel: 750}).on('change', function () {
+  gulp.watch(['./index.html', './*.html', './views/**/*.html'], {intervel: 750}).on('change', function () {
     browserSync.reload();
   });
 
