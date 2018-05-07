@@ -1,0 +1,61 @@
+<div class="dashboard" layout="column" layout-wrap layout-align="space-between center">
+  
+  <header class="dash-header" layout="row" layout-align="space-between center">
+    
+    <div class="header-profile" layout="row" layout-align="center center">
+     
+      <div class="profile-picture">
+        <i class="fas fa-user-circle"></i>
+      </div>
+     
+      <div class="profile-meta">
+        <p class="user-name">Matheus Costa</p>
+        <p class="user-points">415 pts</p>
+      </div>
+    </div>
+
+    <div class="header-menu">
+      <a href="#" class="header-link notifications">
+        <i class="fas fa-bell"></i>
+      </a>
+      <a href="#" class="header-link menu-toggle">
+        <i class="fas fa-ellipsis-v"></i>
+      </a>
+    </div>
+  </header>
+
+  <div class="dash-content" ui-view="content"></div>
+
+   <nav class="dash-navbar">
+      <ul class="navbar-list" layout="row" layout-align="space-between center">
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">
+            <i class="fas fa-home"></i><br>
+            Home
+          </a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">
+            <i class="fas fa-chart-area"></i>
+            <br> Minhas Metas
+          </a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">
+            <i class="fas fa-gem"></i>
+            <br> Recompensas
+          </a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">
+            <i class="fas fa-user-alt"></i>
+            <br> Perfil
+          </a>
+        </li>
+      </ul>
+   </nav>
+
+</div>

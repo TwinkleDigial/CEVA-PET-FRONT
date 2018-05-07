@@ -1,0 +1,243 @@
+.dashboard
+
+  .dash-header
+    width: 100%
+    height: 75px
+    z-index: 3
+    background: $white
+    box-shadow: 1px 2px 6px transparentize($black-light, 0.8)
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 3
+
+  .header-profile
+    padding-left: 15px
+    font-family: 'Poppins', 'Roboto', sans-serif
+
+    .profile-picture
+      margin-right: 10px
+      color: $purple-dark
+
+      i
+        +calREM(40)
+
+    .user-name
+      color: $purple-dark
+      font-weight: light
+      margin: 0
+      line-height: 16px
+      +calREM(15)
+
+    .user-points
+      @extend .user-name
+      +calREM(14)
+
+  .header-menu
+    text-align: right
+    display: flex
+    flex: 0 1 auto
+    align-items: center
+    padding-right: 15px
+    justify-content: flex-end
+
+    a
+      color: $purple-dark
+      +calREM(25)
+
+    .notifications,
+    .menu-toggle
+      margin: 0 15px
+      color: $purple-dark
+
+    .menu-toggle
+      margin-right: 0
+
+  .dash-navbar
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 60px
+    z-index: 5
+    background: $purple-light
+
+    ul
+      margin: 0
+      padding: 0
+      width: 100%
+      height: 60px
+      list-style: none
+      display: flex
+      flex-direction: row
+      align-items: stretch
+      justify-content: space-around
+
+    li
+      flex: 0 1 auto
+      align-self: center
+      color: $white
+      text-align: center
+
+    a
+      color: $white
+      text-decoration: none
+      text-align: center
+      outline: 0
+      display: inline-block
+      +fade()
+      
+      .fa-icon
+        height: 21px
+
+      &:hover,
+      &:focus
+        color: $purple-dark
+        +fade()
+
+  .content
+    margin: 70px 0
+
+  .progress-list
+    margin: 25px 0
+    padding: 0 15px
+    list-style: none
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+
+  .progress-item
+    width: 40px
+    height: 40px
+    background: $purple-dark
+    display: inline-block
+    border-radius: 50%
+    position: relative
+    text-align: center
+
+    &.done,
+    &.failed
+      background: $purple-light
+
+      .fa-times
+        +calREM(30)
+        color: $white
+        text-align: center
+        line-height: 40px
+
+    &.current
+
+      .target
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 2
+        width: 40px
+        height: 40px
+
+    &.future
+      background: $gray
+
+    .fa-icon
+      color: $white
+      position: relative
+      top: 4px
+
+  .current-goal
+    min-height: 130px
+    margin: 15px 0
+    padding: 0 15px
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    font-family: 'Poppins', 'Roboto', sans-serif
+
+  .current-goal
+    min-height: 130px
+    margin: 15px 0
+    padding: 0 15px
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    font-family: 'Poppins', 'Roboto', sans-serif
+    
+
+    .goal-picture
+      position: relative
+      z-index: 2
+
+    .goal-title
+      +calREM(18)
+      color: $purple-dark
+      margin-bottom: 5px
+
+    .goal-meta
+      width: 80%
+
+    .goal-progress
+      min-width: 200px
+      width: 95%
+      max-width: 95%
+      background: linear-gradient(to right, $purple-dark 42%, $gray-light 42%)
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      padding: 5px 10px
+      border-top-right-radius: 5px
+      border-bottom-right-radius: 5px
+      position: relative
+      left: -5px
+      z-index: 1
+      height: 35px
+
+    .goal-name
+      color: $purple-light
+      +calREM(17)
+      float: left
+      mix-blend-mode: multiply
+
+    .goal-points
+      @extend .goal-name
+      float: right
+
+  .alert-banner
+    img
+      max-width: 100%
+      margin: 0 auto
+      display: block
+
+  .claimed-rewards
+    padding: 0 35px
+    margin: 15px 0
+    text-align: center
+
+    .slick-slider
+      position: relative
+
+    .slick-arrow
+      position: absolute
+      top: 30px
+      text-align: center
+      padding: 5px
+      +calREM(18)
+
+      &.fa-chevron-right
+        right: -20px
+
+      &.fa-chevron-left
+        left: -20px
+
+    .reward-name
+      +calREM(14)
+      color: $purple-dark
+      display: block
+      text-align: center
+
+    img
+      max-width: 100%
+      margin: 0 auto

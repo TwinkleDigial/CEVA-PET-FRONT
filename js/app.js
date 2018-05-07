@@ -8,7 +8,8 @@ var app = angular.module('cevapetgame', [
 	'angular-loading-bar',
 	'md.data.table',
 	'ui.utils.masks',
-	'ui.tinymce'
+  'ui.tinymce',
+  'slickCarousel'
 	])
 
 // app.run(function($trace) {
@@ -53,21 +54,41 @@ app.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
 
 app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", 
 		function($stateProvider, $urlRouterProvider, $locationProvider){
-	$locationProvider.html5Mode(true);
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });	
 
 	$stateProvider
 		.state('login', {
 			url: '/',
 			views: {
 				'app@': {
-					templateUrl: '/views/login/login.html',
+					templateUrl: './views/login/login.html',
 					controller: 'LoginCtrl'
 				}
 			},
 			resolve: {
 				
 			}
-		})
+    })
+    
+    .state('app', {
+      url: '/dashboard',
+      views: {
+        'app@': {
+          templateUrl: './views/dashboard/dashboard.html',
+          controller: 'DashCtrl'
+        },
+        'content@app': {
+          templateUrl: './views/dashboard/dashboard.home.html',
+          controller: 'DashHomeCtrl'
+        }
+      },
+      resolve: {
+
+      }
+    })
 
 		// .state('new-admission', {
 		// 	url: '/candidato/:id',
